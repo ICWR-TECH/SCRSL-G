@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Shellcode Reverse Shell Linux Generator
 # R&D ICWR - Afrizal F.A
 # Reverse Shell C Code Source : https://github.com/arturgontijo/remoteShell
